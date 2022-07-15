@@ -25,6 +25,14 @@
             }
         }
     }
+
+    .nav-controls{
+      display: none;
+      z-index: 10;
+      svg{
+        font-size: 3rem;
+      }
+    }
   
     nav {
       display: flex;
@@ -131,17 +139,51 @@
     .nav-bar {
       flex-direction: row;
       justify-content: flex-start;
+
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      .nav-controls{
+        display: initial;
+        margin-right: 1.5rem;
+      }
   
-      /*dejar el logo y poner X y burguer
-      mostrar el menu en column con los after act*/
       .logo {
+        margin-left: 1.5rem;
+        margin-right: auto;
+
+        .sub-logo {
+          display: none;
+        }
+      }
+      .desktop-nav{
         display: none;
       }
   
-      nav{
-        flex-direction: row;
+      .mobile-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #181818;
+        height: 100vh;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        padding: 8rem;
+        
+        a{
+          font-size: 3rem;
+
+          &:after {
+            font-size: 1.2rem;
+            letter-spacing: .2rem;
+            transform: none;
+            opacity: 1;
+            top: 0;
+            left: 60px;
+          }
+
+        }
       }
   
       ul{

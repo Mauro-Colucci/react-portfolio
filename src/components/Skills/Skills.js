@@ -14,7 +14,7 @@ const Skills = () => {
       textColour: '#fff',
       outlineThickness: 0.5,
       outlineColour: '#FE0853',
-      maxSpeed: 0.06,
+      maxSpeed: 0.07,
       freezeActive: true,
       shuffleTags: true,
       shape: 'sphere',

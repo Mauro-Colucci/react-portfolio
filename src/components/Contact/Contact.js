@@ -52,16 +52,21 @@ const sendemail = (e)=>{
             </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint ipsam voluptatibus dolore maxime tempore, consequatur impedit nobis tempora quod?</p>
             <div className="contact-form">
-                <form ref={refForm} onSubmit={sendemail}>
+                <form ref={refForm} onSubmit={sendemail} autoComplete="off">
                     <ul>
                         <li>
                             <input type="text" name='name' placeholder='Name' required />
+                            <label></label>
                         </li>
                         <li>
                             <input type="email" name='email' placeholder='Email' required />
+                            <label></label>
+
                         </li>
                         <li>
                             <input placeholder='Subject' type='text' name='subject' required />
+                            <label></label>
+
                         </li>
                         <li>
                             <textarea placeholder='Message' name="message" required></textarea>
