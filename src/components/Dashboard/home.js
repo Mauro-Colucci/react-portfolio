@@ -1,4 +1,4 @@
-import { addDoc, collection } from 'firebase/firestore/lite'
+import { addDoc, collection } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import { useRef } from 'react'
 import { auth, db, storage } from '../../firebase'
