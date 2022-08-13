@@ -44,13 +44,17 @@ const Portfolio = () => {
   }
 
   useEffect(()=> {
+      //moved async f inside useeffect
+      const getPortfolio = async() => {
+      const querySnapshot = await getDocs(collection(db,'portfolio'));
+      //foreach? I don't think I need map here
+      setPortfolio(querySnapshot.docs.map((doc)=> doc.data()))
+    }
+
     getPortfolio()
   },[])
 
-  const getPortfolio = async() => {
-    const querySnapshot = await getDocs(collection(db,'portfolio'));
-    setPortfolio(querySnapshot.docs.map((doc)=> doc.data()))
-  }
+ 
 
 
   return (
